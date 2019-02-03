@@ -117,22 +117,22 @@
 \begin{frame}{Infinite Ramsey's Theorem}
 
   \begin{theorem}[Infinite Ramsey's Theorem - $\RT^2_2$]
-    Given a mapping $f:\N\times\N \to \{\red, \blue\}$
+    Given a mapping $f:[\N]^2 \to \{\red, \blue\}$
 
     there is an infinite set $H\subseteq\N$ and a color $c \in \{\red, \blue\}$
     
-    such that $\restr{f}{H\times H}(x) = c$ for all $x\in H$.
+    such that $\restr{f}{[H]^2}(x) = c$ for all $x\in H$.
   \end{theorem}
 
   \uncover<2->{
   \begin{theorem}[Infinite Ramsey's Theorem - $\mathsf{RT}^n_k$]
     For all $n,k\in\N$
 
-    Given a mapping $f:\N^n \to \{1, \ldots, k\}$
+    Given a mapping $f:[\N]^n \to \{1, \ldots, k\}$
 
     there is an infinite set $H\subseteq\N$ and a color $1 \leq c\leq k$
 
-    such that $\restr{f}{H^n}(x) = c$ for all $x\in H$.
+    such that $\restr{f}{[H]^n}(x) = c$ for all $x\in H$.
   \end{theorem}
   }
 \end{frame}
@@ -467,8 +467,6 @@
 \end{frame}
 
 \begin{frame}{Peano Arithmetic with restricted Induction}
-  Following HP:
-
   Peano arithmetic with the full induction axioms replaced by:
   \begin{itemize}
     \item successor induction for $\Sigma_n$ formulas: $\mathsf{I}\Sigma_n$.
@@ -558,7 +556,7 @@
     \begin{definition}[almost full]
       Let $Y: (\N\to\N) \to \N$.
       We say that $A\subseteq\N$ is \textbf{almost full for $Y$}
-      if given any increasing $f:\N\to\N$, $Y(f)\in A$.
+      if given any increasing $f:\N\to\N$, $f(Y(f))\in A$.
       \\
       We say that $A\subseteq\N$ is \textbf{almost full}
       if it is almost full for some $Y$.
